@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Russell Dave C. Socias | Portfolio</title>
+  <meta name="description" content="Portfolio of Russell Dave C. Socias: projects, skills, and contact information.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Russell Dave C. Socias, back to top">RCS</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <div class="blobs" aria-hidden="true"><span></span><span></span></div>
+      <p class="hero-hello">Hello, I'm</p>
+      <h1 id="hero-title">Russell Dave C. Socias</h1>
+      <p class="hero-role">Free to explore my projects and my personal Information.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View my projects</a>
+        <button class="btn btn-ghost" id="spark-btn" type="button">Sprinkle some sparkle</button>
+      </div>
+      <p id="spark-status" class="sr-only" role="status"></p>
+      <canvas id="sparkles" aria-hidden="true"></canvas>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>Hi my name is Russell Dave Socias, i am 21 years old and i live in rizal barobo surigao del sur. I am a choreographer and a dancer, i am creative and a leader..</p>
+      <p>Outside of code, I like exploring new design tools and learning something new every week.</p>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div role="group" aria-labelledby="filter-label" class="filters">
+        <span id="filter-label">Show:</span>
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="Coding" aria-pressed="false">Coding</button>
+        <button type="button" class="chip" data-filter="creative" aria-pressed="false">Creative</button>
+        <button type="button" class="chip" data-filter="Social" aria-pressed="false">Social</button>
+      </div>
+      <p id="skill-count" class="sr-only" role="status" aria-live="polite"></p>
+      <ul class="skill-list">
+        <li data-cat="Coding">HTML5 <meter min="0" max="100" value="90" aria-label="HTML5 proficiency">90%</meter></li>
+        <li data-cat="Coding">CSS3 <meter min="0" max="100" value="85" aria-label="CSS3 proficiency">85%</meter></li>
+        <li data-cat="Coding">JavaScript <meter min="0" max="100" value="75" aria-label="JavaScript proficiency">75%</meter></li>
+        <li data-cat="Social">Public Speaking<meter min="0" max="100" value="90" aria-label="Public Speaking proficiency">80%</meter></li>
+        <li data-cat="Social">Leadership <meter min="0" max="100" value="100" aria-label="Leadership proficiency">100%</meter></li>
+        <li data-cat="creative">Arts <meter min="0" max="100" value="95" aria-label="Arts proficiency">95%</meter></li>
+        <li data-cat="Social">Communication Skills<meter min="0" max="100" value="100" aria-label="Figma proficiency">100%</meter></li>
+      </ul>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <p>Select a project to read more.</p>
+      <div class="projects">
+        <article class="project">
+          <h3><button type="button" class="acc" aria-expanded="false" aria-controls="p1">Video Pitch</button></h3>
+          <div id="p1" class="panel" hidden>
+            <p> TraffyX, A pitching idea that solves the problem of traffic issues in urban areas.</p>
+          </div>
+        </article>
+        <article class="project">
+          <h3><button type="button" class="acc" aria-expanded="false" aria-controls="p2">Robotics</button></h3>
+          <div id="p2" class="panel" hidden>
+            <p>A robotic project we built during our Embedded Finals.</p>
+          </div>
+        </article>
+        <article class="project">
+          <h3><button type="button" class="acc" aria-expanded="false" aria-controls="p3">Boarding House Curfew Management Sytem</button></h3>
+          <div id="p3" class="panel" hidden>
+            <p>A web system we built in our web course, it is a web based system that solves the problem of curfew issues in every boarding house within lianga.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact me</h2>
+      <p>Fields marked with an asterisk (*) are required.</p>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-err">
+          <p id="name-err" class="err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="email">Email address *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-err">
+          <p id="email-err" class="err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="msg">Message *</label>
+          <textarea id="msg" name="msg" rows="4" required aria-describedby="msg-err"></textarea>
+          <p id="msg-err" class="err" hidden></p>
+        </div>
+        <button class="btn" type="submit">Send message</button>
+        <p id="form-status" class="status" role="status" tabindex="-1"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Russell C. Socias. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
